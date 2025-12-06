@@ -5,7 +5,7 @@ import Link from "next/link";
 import DotGrid from "@/components/DotGrid";
 
 export const revalidate = 3600; // or 86400 for 1 day
-export const dynamic = "force-static";
+
 export default async function HomePage() {
   const posts = await getAllPosts();
 
