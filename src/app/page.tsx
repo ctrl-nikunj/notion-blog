@@ -29,10 +29,10 @@ export default async function HomePage() {
       <main className="relative z-10 container mx-auto px-6 py-20">
         <header className="mb-20 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-4">
-            Notion Blog
+            Nikunj's Blog Page
           </h1>
           <p className="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto">
-            A minimal blog powered by Notion and Next.js.
+            Powered by Notion. Developed on Next.js.
           </p>
         </header>
 
