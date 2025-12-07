@@ -10,6 +10,7 @@ export interface BlogWithSlug {
     title: string;
     slug: string;
     date: string | undefined;
+    tags: string[];
     cover: string;
 }
 
@@ -36,6 +37,7 @@ export const getAllPosts = cache(async (): Promise<BlogWithSlug[]> => {
         title: page.properties.Title?.title[0]?.plain_text ?? "Untitled",
         slug: page.properties.Slug?.rich_text[0]?.plain_text ?? page.id,
         date: page.properties["Published Date"]?.date?.start ?? undefined,
+        tags: page.properties.Tags?.multi_select.map((tag: any) => tag.name) ?? [],
         cover: page.cover?.external?.url ?? "",
     }));
 });

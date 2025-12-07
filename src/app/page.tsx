@@ -39,7 +39,7 @@ export default async function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-6 gap-8">
           {posts.map((post) => (
             <Link key={post.id} href={`/post/${post.id}`} className="block group h-full">
-              <Card className="h-full bg-zinc-900/50 backdrop-blur-md border-zinc-800/50 hover:border-zinc-700 hover:bg-zinc-900/80 transition-all duration-300 overflow-hidden flex flex-col">
+              <Card className="h-full bg-zinc-900/50 backdrop-blur-md border-zinc-800/50 hover:border-zinc-700 hover:bg-zinc-900/80 hover:scale-105 transition-all duration-500 overflow-hidden flex flex-col">
                 <CardHeader className="p-0">
                   {post.cover ? (
                     <div className="relative w-full -mt-6 aspect-video">
@@ -61,10 +61,13 @@ export default async function HomePage() {
                   <CardTitle className="text-xl text-zinc-100 font-semibold mb-2 group-hover:text-white transition-colors">
                     {post.title}
                   </CardTitle>
-                  {/* Optional: Add excerpt if available in future */}
-                  {/* <p className="text-zinc-400 text-sm line-clamp-3">...</p> */}
+                  <CardDescription className="text-zinc-500 text-xs uppercase tracking-wider font-medium">
+                    {post.tags.map((tag) =>(
+                      <span key={tag} className="p-1 bg-zinc-700 text-zinc-100 font-light rounded mr-2">{tag}</span>
+                    ))}
+                  </CardDescription>
                 </CardContent>
-                <CardFooter className="px-6 pb-6 pt-0 mt-auto">
+                <CardFooter className="mt-auto">
                   <CardDescription className="text-zinc-500 text-xs uppercase tracking-wider font-medium">
                     {post.date || 'No Date'}
                   </CardDescription>
