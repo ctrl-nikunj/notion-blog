@@ -10,7 +10,8 @@ import {
     Quote,
     Code,
     Divider,
-    Table
+    Table,
+    H3
 } from "./ui/components";
 
 export default function MDXRenderer({ blocks }: { blocks: Array<MdBlock> }) {
@@ -26,6 +27,7 @@ export default function MDXRenderer({ blocks }: { blocks: Array<MdBlock> }) {
             case "code": return <Code key={block.blockId} text={block.parent} />
             case "divider": return <Divider key={block.blockId} text={block.parent} />
             case "table": return <Table key={block.blockId} text={block.parent} />
+            case "heading_3": return <H3 key={block.blockId} text={block.parent} />
             // etc…
         }
     });
