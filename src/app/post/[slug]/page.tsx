@@ -35,7 +35,7 @@ export default async function PostPage({ params }: Prop) {
             </div>
             <main className="max-w-3xl relative mx-auto py-16 prose z-2">
                 <Suspense fallback={<div>Loading...</div>}>
-                    <h1 className="text-4xl text-white font-bold mb-4">{post.title}</h1>
+                    <h1 className="text-6xl text-white font-bold mb-4">{post.title}</h1>
 
                     {post.date && (
                         <p className="text-gray-500 text-sm mb-4">{post.date}</p>
