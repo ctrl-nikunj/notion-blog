@@ -30,7 +30,7 @@ export function H2({ text }: { text: string }) {
 export function H3({ text }: { text: string }) {
     const string = text.replace(/\#/g,"");
     return (
-        <h3 className="text-2xl text-white font-semibold tracking-tight mt-6 mb-2">
+        <h3 className="text-2xl text-white font-medium tracking-tight mt-6 mb-2">
             {parseText(string)}
         </h3>
     );
