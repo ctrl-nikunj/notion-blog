@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import DotGrid from "@/components/DotGrid";
 
-export const revalidate = 3600; // or 86400 for 1 day
+export const revalidate = 600; // or 86400 for 1 day
 
 export default async function HomePage() {
   const posts = await getAllPosts();
