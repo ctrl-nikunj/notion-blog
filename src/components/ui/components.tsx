@@ -55,7 +55,7 @@ export function ImageBlock({ text }: { text: string }) {
 
 export function BulletedListItem({ text }: { text: string }) {
     return (
-        <li className="ml-6 list-disc text-base leading-7 text-gray-800 my-1">
+        <li className="ml-6 list-disc text-base leading-7 text-white my-1">
             {parseText(text)}
         </li>
     );

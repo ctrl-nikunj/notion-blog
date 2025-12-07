@@ -4,7 +4,8 @@ export function parseText(text: string) {
   html = html
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+    .replace(/>/g, "&gt;")
+    .replace(/\-/g, "");
 
   html = html.replace(
     /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
