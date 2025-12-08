@@ -57,13 +57,13 @@ export default async function HomePage() {
                     </div>
                   )}
                 </CardHeader>
-                <CardContent className="p-6 flex-1 flex flex-col justify-start">
+                <CardContent className="flex-1 flex flex-col justify-start">
                   <CardTitle className="text-xl text-zinc-100 font-semibold mb-2 group-hover:text-white transition-colors">
                     {post.title}
                   </CardTitle>
-                  <CardDescription className="text-zinc-500 text-xs uppercase tracking-wider font-medium">
+                  <CardDescription className="text-zinc-500 text-xs uppercase tracking-wider font-medium gap-1 flex flex-wrap">
                     {post.tags.map((tag) =>(
-                      <span key={tag} className="p-1 bg-zinc-700 text-zinc-100 font-light rounded mr-2">{tag}</span>
+                      <span key={tag} className="p-1 bg-zinc-700 text-zinc-100 font-light rounded mr-1">{tag}</span>
                     ))}
                   </CardDescription>
                 </CardContent>

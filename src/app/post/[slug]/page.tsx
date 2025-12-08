@@ -33,7 +33,7 @@ export default async function PostPage({ params }: Prop) {
                     returnDuration={1.5}
                 />
             </div>
-            <main className="max-w-3xl relative mx-auto py-16 prose z-2">
+            <main className="max-w-3xl relative mx-auto py-16 p-8 prose z-2">
                 <Suspense fallback={<div>Loading...</div>}>
                     <h1 className="text-6xl text-white font-bold mb-4">{post.title}</h1>
 
